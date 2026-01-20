@@ -1,29 +1,38 @@
 function toggleCard(header) {
   const body = header.nextElementSibling;
-  const arrow = header.querySelector('.arrow');
-
-  if (body.style.display === "block") {
-    body.style.display = "none";
-    arrow.innerText = "+";
-  } else {
-    body.style.display = "block";
-    arrow.innerText = "−";
-  }
+  body.style.display = body.style.display === "block" ? "none" : "block";
 }
 
-// Progress save
 const topics = document.querySelectorAll('.topic');
 
-function saveProgress() {
+function updateProgress() {
+  const groups = ['gs1','gs2','gs3','gs4'];
+  let totalDone = 0;
+  let total = topics.length;
+
+  groups.forEach(g => {
+    const groupTopics = document.querySelectorAll('.' + g);
+    let done = 0;
+    groupTopics.forEach(t => t.checked && done++);
+    const percent = Math.round((done / groupTopics.length) * 100) || 0;
+    document.getElementById(g + 'Percent').innerText = percent + '%';
+    totalDone += done;
+  });
+
+  const overall = Math.round((totalDone / total) * 100) || 0;
+  document.getElementById('overallPercent').innerText = overall + '%';
+  document.getElementById('overallFill').style.width = overall + '%';
+
   localStorage.setItem(
-    'conquerIASProgress',
+    'conquerIASProgressV3',
     JSON.stringify([...topics].map(t => t.checked))
   );
 }
 
-topics.forEach(t => t.addEventListener('change', saveProgress));
+topics.forEach(t => t.addEventListener('change', updateProgress));
 
-const saved = JSON.parse(localStorage.getItem('conquerIASProgress'));
+const saved = JSON.parse(localStorage.getItem('conquerIASProgressV3'));
 if (saved) {
   topics.forEach((t,i)=> t.checked = saved[i]);
+  updateProgress();
 }
