@@ -1,23 +1,29 @@
+function toggleCard(header) {
+  const body = header.nextElementSibling;
+  const arrow = header.querySelector('.arrow');
+
+  if (body.style.display === "block") {
+    body.style.display = "none";
+    arrow.innerText = "+";
+  } else {
+    body.style.display = "block";
+    arrow.innerText = "−";
+  }
+}
+
+// Progress save
 const topics = document.querySelectorAll('.topic');
-const bar = document.getElementById('bar');
-const text = document.getElementById('progressText');
 
-function update() {
-  let done = 0;
-  topics.forEach(t => t.checked && done++);
-  const percent = Math.round((done / topics.length) * 100);
-  bar.style.width = percent + '%';
-  text.innerText = `Completed: ${percent}%`;
-
-  localStorage.setItem('upscProgressV2',
+function saveProgress() {
+  localStorage.setItem(
+    'conquerIASProgress',
     JSON.stringify([...topics].map(t => t.checked))
   );
 }
 
-topics.forEach(t => t.addEventListener('change', update));
+topics.forEach(t => t.addEventListener('change', saveProgress));
 
-const saved = JSON.parse(localStorage.getItem('upscProgressV2'));
+const saved = JSON.parse(localStorage.getItem('conquerIASProgress'));
 if (saved) {
   topics.forEach((t,i)=> t.checked = saved[i]);
-  update();
 }
