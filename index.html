@@ -11,6 +11,14 @@
 <header class="top">
   <h1>Conquer IAS</h1>
   <p class="tagline">The Resolve</p>
+
+  <div class="overall">
+    <div class="overall-text">Overall Progress: <span id="overallPercent">0%</span></div>
+    <div class="overall-bar">
+      <div id="overallFill"></div>
+    </div>
+  </div>
+
   <a class="cta" href="https://t.me/+wOujve2BkKM5YmE1" target="_blank">
     Join Telegram – Daily Prelims Targets
   </a>
@@ -18,55 +26,58 @@
 
 <div class="container">
 
-  <!-- SUBJECT CARD -->
-  <div class="card">
+  <!-- GS 1 -->
+  <div class="card" data-group="gs1">
     <div class="card-header" onclick="toggleCard(this)">
       <h2>GS Paper I</h2>
-      <span class="arrow">+</span>
+      <span class="percent" id="gs1Percent">0%</span>
     </div>
     <div class="card-body">
-      <label><input type="checkbox" class="topic"> Ancient & Medieval History</label>
-      <label><input type="checkbox" class="topic"> Modern History</label>
-      <label><input type="checkbox" class="topic"> Indian Society</label>
-      <label><input type="checkbox" class="topic"> World & Indian Geography</label>
+      <label><input type="checkbox" class="topic gs1"> Ancient & Medieval History</label>
+      <label><input type="checkbox" class="topic gs1"> Modern History</label>
+      <label><input type="checkbox" class="topic gs1"> Indian Society</label>
+      <label><input type="checkbox" class="topic gs1"> World & Indian Geography</label>
     </div>
   </div>
 
-  <div class="card">
+  <!-- GS 2 -->
+  <div class="card" data-group="gs2">
     <div class="card-header" onclick="toggleCard(this)">
       <h2>GS Paper II</h2>
-      <span class="arrow">+</span>
+      <span class="percent" id="gs2Percent">0%</span>
     </div>
     <div class="card-body">
-      <label><input type="checkbox" class="topic"> Constitution</label>
-      <label><input type="checkbox" class="topic"> Governance</label>
-      <label><input type="checkbox" class="topic"> Polity</label>
-      <label><input type="checkbox" class="topic"> International Relations</label>
+      <label><input type="checkbox" class="topic gs2"> Constitution</label>
+      <label><input type="checkbox" class="topic gs2"> Governance</label>
+      <label><input type="checkbox" class="topic gs2"> Polity</label>
+      <label><input type="checkbox" class="topic gs2"> International Relations</label>
     </div>
   </div>
 
-  <div class="card">
+  <!-- GS 3 -->
+  <div class="card" data-group="gs3">
     <div class="card-header" onclick="toggleCard(this)">
       <h2>GS Paper III</h2>
-      <span class="arrow">+</span>
+      <span class="percent" id="gs3Percent">0%</span>
     </div>
     <div class="card-body">
-      <label><input type="checkbox" class="topic"> Economy</label>
-      <label><input type="checkbox" class="topic"> Agriculture</label>
-      <label><input type="checkbox" class="topic"> Science & Technology</label>
-      <label><input type="checkbox" class="topic"> Environment & Ecology</label>
-      <label><input type="checkbox" class="topic"> Security</label>
+      <label><input type="checkbox" class="topic gs3"> Economy</label>
+      <label><input type="checkbox" class="topic gs3"> Agriculture</label>
+      <label><input type="checkbox" class="topic gs3"> Science & Technology</label>
+      <label><input type="checkbox" class="topic gs3"> Environment & Ecology</label>
+      <label><input type="checkbox" class="topic gs3"> Security</label>
     </div>
   </div>
 
-  <div class="card">
+  <!-- GS 4 -->
+  <div class="card" data-group="gs4">
     <div class="card-header" onclick="toggleCard(this)">
       <h2>GS Paper IV</h2>
-      <span class="arrow">+</span>
+      <span class="percent" id="gs4Percent">0%</span>
     </div>
     <div class="card-body">
-      <label><input type="checkbox" class="topic"> Ethics & Integrity</label>
-      <label><input type="checkbox" class="topic"> Aptitude</label>
+      <label><input type="checkbox" class="topic gs4"> Ethics & Integrity</label>
+      <label><input type="checkbox" class="topic gs4"> Aptitude</label>
     </div>
   </div>
 
