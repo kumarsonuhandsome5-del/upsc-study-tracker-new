@@ -8,7 +8,7 @@ body {
 }
 
 .top {
-  background: #ffffff;
+  background: #fff;
   padding: 20px;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -20,9 +20,33 @@ body {
 }
 
 .tagline {
-  margin: 4px 0 12px;
+  margin: 4px 0 10px;
   font-weight: bold;
   opacity: 0.7;
+}
+
+.overall {
+  max-width: 420px;
+  margin: 10px auto 14px;
+}
+
+.overall-text {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.overall-bar {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+#overallFill {
+  height: 100%;
+  width: 0%;
+  background: #43a047;
 }
 
 .cta {
@@ -52,17 +76,12 @@ body {
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   cursor: pointer;
+  font-weight: bold;
 }
 
-.card-header h2 {
-  margin: 0;
-  font-size: 18px;
-}
-
-.arrow {
-  font-size: 20px;
+.percent {
+  color: #1a237e;
 }
 
 .card-body {
