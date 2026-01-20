@@ -1,76 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-4EDP5Y0VH5');
-</script>
->
-  <meta charset="UTF-8" />
-  <title>UPSC Study Tracker</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<head>
+  <meta charset="UTF-8">
+  <title>Conquer IAS – The Resolve</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>UPSC Prelims Study Tracker</h1>
-  <p>Free, simple & effective syllabus tracker for UPSC aspirants</p>
-  https://t.me/+wOujve2BkKM5YmE1
-</header><ul>
-  <li>✔ Free daily Prelims targets</li>
-  <li>✔ Smart syllabus tracking</li>
-  <li>✔ Aspirant-run, no spam</li>
-</ul>
+<header class="top">
+  <h1>Conquer IAS</h1>
+  <p class="tagline">The Resolve</p>
+  <a class="cta" href="https://t.me/+wOujve2BkKM5YmE1" target="_blank">
+    Join Telegram – Daily Prelims Targets
+  </a>
+</header>
 
+<div class="container">
 
-<section class="card">
-  <h2>Progress</h2>
-  <div class="progress-wrap">
-    <div id="bar"></div>
+  <!-- SUBJECT CARD -->
+  <div class="card">
+    <div class="card-header" onclick="toggleCard(this)">
+      <h2>GS Paper I</h2>
+      <span class="arrow">+</span>
+    </div>
+    <div class="card-body">
+      <label><input type="checkbox" class="topic"> Ancient & Medieval History</label>
+      <label><input type="checkbox" class="topic"> Modern History</label>
+      <label><input type="checkbox" class="topic"> Indian Society</label>
+      <label><input type="checkbox" class="topic"> World & Indian Geography</label>
+    </div>
   </div>
-  <p id="progressText">Completed: 0%</p>
-</section>
 
-<section class="card">
-  <h2>GS Paper I</h2>
-  <label><input type="checkbox" class="topic"> Ancient & Medieval History</label>
-  <label><input type="checkbox" class="topic"> Modern History</label>
-  <label><input type="checkbox" class="topic"> Indian Society</label>
-  <label><input type="checkbox" class="topic"> World & Indian Geography</label>
-</section>
+  <div class="card">
+    <div class="card-header" onclick="toggleCard(this)">
+      <h2>GS Paper II</h2>
+      <span class="arrow">+</span>
+    </div>
+    <div class="card-body">
+      <label><input type="checkbox" class="topic"> Constitution</label>
+      <label><input type="checkbox" class="topic"> Governance</label>
+      <label><input type="checkbox" class="topic"> Polity</label>
+      <label><input type="checkbox" class="topic"> International Relations</label>
+    </div>
+  </div>
 
-<section class="card">
-  <h2>GS Paper II</h2>
-  <label><input type="checkbox" class="topic"> Constitution</label>
-  <label><input type="checkbox" class="topic"> Governance</label>
-  <label><input type="checkbox" class="topic"> Polity</label>
-  <label><input type="checkbox" class="topic"> International Relations</label>
-</section>
+  <div class="card">
+    <div class="card-header" onclick="toggleCard(this)">
+      <h2>GS Paper III</h2>
+      <span class="arrow">+</span>
+    </div>
+    <div class="card-body">
+      <label><input type="checkbox" class="topic"> Economy</label>
+      <label><input type="checkbox" class="topic"> Agriculture</label>
+      <label><input type="checkbox" class="topic"> Science & Technology</label>
+      <label><input type="checkbox" class="topic"> Environment & Ecology</label>
+      <label><input type="checkbox" class="topic"> Security</label>
+    </div>
+  </div>
 
-<section class="card">
-  <h2>GS Paper III</h2>
-  <label><input type="checkbox" class="topic"> Economy</label>
-  <label><input type="checkbox" class="topic"> Agriculture</label>
-  <label><input type="checkbox" class="topic"> Science & Technology</label>
-  <label><input type="checkbox" class="topic"> Environment & Ecology</label>
-  <label><input type="checkbox" class="topic"> Security</label>
-</section>
+  <div class="card">
+    <div class="card-header" onclick="toggleCard(this)">
+      <h2>GS Paper IV</h2>
+      <span class="arrow">+</span>
+    </div>
+    <div class="card-body">
+      <label><input type="checkbox" class="topic"> Ethics & Integrity</label>
+      <label><input type="checkbox" class="topic"> Aptitude</label>
+    </div>
+  </div>
 
-<section class="card">
-  <h2>GS Paper IV</h2>
-  <label><input type="checkbox" class="topic"> Ethics & Integrity</label>
-  <label><input type="checkbox" class="topic"> Aptitude</label>
-</section>
+</div>
 
 <footer>
-  <p>© UPSC Study Tracker • Free for Aspirants</p>
+  © Conquer IAS • Free for Aspirants
 </footer>
 
 <script src="script.js"></script>
 </body>
-</html><p>Free • No spam • Aspirants-run initiative</p>
-
+</html>
