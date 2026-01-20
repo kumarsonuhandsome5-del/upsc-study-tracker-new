@@ -1,19 +1,23 @@
-body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  background: #f5f5f5;
+const topics = document.querySelectorAll('.topic');
+const bar = document.getElementById('bar');
+const text = document.getElementById('progressText');
+
+function update() {
+  let done = 0;
+  topics.forEach(t => t.checked && done++);
+  const percent = Math.round((done / topics.length) * 100);
+  bar.style.width = percent + '%';
+  text.innerText = `Completed: ${percent}%`;
+
+  localStorage.setItem('upscProgressV2',
+    JSON.stringify([...topics].map(t => t.checked))
+  );
 }
 
-h1 {
-  color: #1a237e;
-}
+topics.forEach(t => t.addEventListener('change', update));
 
-label {
-  display: block;
-  margin: 5px 0;
-}
-
-a {
-  color: blue;
-  font-weight: bold;
+const saved = JSON.parse(localStorage.getItem('upscProgressV2'));
+if (saved) {
+  topics.forEach((t,i)=> t.checked = saved[i]);
+  update();
 }
