@@ -1,32 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>UPSC Study Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<header>
   <h1>UPSC Prelims Study Tracker</h1>
-  <p>Free syllabus tracker for UPSC aspirants</p>
+  <p>Free, simple & effective syllabus tracker for UPSC aspirants</p>
+  <a class="cta" href="https://t.me/your_telegram_link" target="_blank">Join Telegram for Daily Targets</a>
+</header>
 
+<section class="card">
+  <h2>Progress</h2>
+  <div class="progress-wrap">
+    <div id="bar"></div>
+  </div>
+  <p id="progressText">Completed: 0%</p>
+</section>
+
+<section class="card">
   <h2>GS Paper I</h2>
-  <label><input type="checkbox" class="topic"> History</label><br>
-  <label><input type="checkbox" class="topic"> Geography</label><br>
-  <label><input type="checkbox" class="topic"> Polity</label><br>
-  <label><input type="checkbox" class="topic"> Economy</label><br>
-  <label><input type="checkbox" class="topic"> Environment</label><br>
+  <label><input type="checkbox" class="topic"> Ancient & Medieval History</label>
+  <label><input type="checkbox" class="topic"> Modern History</label>
+  <label><input type="checkbox" class="topic"> Indian Society</label>
+  <label><input type="checkbox" class="topic"> World & Indian Geography</label>
+</section>
 
-  <h3 id="progress"></h3>
+<section class="card">
+  <h2>GS Paper II</h2>
+  <label><input type="checkbox" class="topic"> Constitution</label>
+  <label><input type="checkbox" class="topic"> Governance</label>
+  <label><input type="checkbox" class="topic"> Polity</label>
+  <label><input type="checkbox" class="topic"> International Relations</label>
+</section>
 
-  <hr>
+<section class="card">
+  <h2>GS Paper III</h2>
+  <label><input type="checkbox" class="topic"> Economy</label>
+  <label><input type="checkbox" class="topic"> Agriculture</label>
+  <label><input type="checkbox" class="topic"> Science & Technology</label>
+  <label><input type="checkbox" class="topic"> Environment & Ecology</label>
+  <label><input type="checkbox" class="topic"> Security</label>
+</section>
 
-  <p>
-    📢 Join our Telegram for free daily targets  
-    <br>
-    <a href="#" target="_blank">Join Telegram</a>
-  </p>
+<section class="card">
+  <h2>GS Paper IV</h2>
+  <label><input type="checkbox" class="topic"> Ethics & Integrity</label>
+  <label><input type="checkbox" class="topic"> Aptitude</label>
+</section>
 
-  <script src="script.js"></script>
+<footer>
+  <p>© UPSC Study Tracker • Free for Aspirants</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
